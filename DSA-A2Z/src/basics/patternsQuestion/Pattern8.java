@@ -1,5 +1,8 @@
 package basics.patternsQuestion;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -42,6 +45,11 @@ public static void main(String[] args) {
 			nos=nos-2;
 		}
 	}
+	List<Integer> singletonList = Collections.singletonList(5);
+	List<Integer> list2= new ArrayList<Integer>(List.of(1,2,3,4,5));
+	boolean addAll = list2.addAll(singletonList);	
+	System.out.println(list2);
+//	boolean addAll2 = singletonList.addAll(list2);
 	sc.close();
 }
 }
