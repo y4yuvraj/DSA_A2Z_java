@@ -9,9 +9,10 @@ public class AllSubsetOfString {
     }
 
 
-    static void subset(String str)
+    static String subset(String str)
     {
-        return subset();
+
+        return subset(str);
     }
 
 }
