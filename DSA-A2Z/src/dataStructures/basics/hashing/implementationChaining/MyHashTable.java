@@ -3,10 +3,10 @@ package dataStructures.basics.hashing.implementationChaining;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class MyHash {
+public class MyHashTable {
  int bucket;
  ArrayList<LinkedList <Integer>> hashTable;
- MyHash(int bucket)
+ MyHashTable(int bucket)
  {
      this.bucket=bucket;
      this.hashTable=new ArrayList<LinkedList <Integer>>(bucket);
@@ -41,7 +41,7 @@ public class MyHash {
  }
 
     public static void main(String[] args) {
-        MyHash myMap= new MyHash(7);
+        MyHashTable myMap= new MyHashTable(7);
         myMap.insert(70);
         myMap.insert(71);
         myMap.insert(9);
