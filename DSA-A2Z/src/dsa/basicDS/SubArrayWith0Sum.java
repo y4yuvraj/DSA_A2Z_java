@@ -19,10 +19,8 @@ public class SubArrayWith0Sum {
         for(int i=0;i< arr.length;i++)
         {
             prefixSum=prefixSum+arr[i];
-            if(hashSet.contains(prefixSum))
-            {
+            if(prefixSum == 0 || hashSet.contains(prefixSum))
                 return true;
-            }
             hashSet.add(prefixSum);
         }
         return false;
