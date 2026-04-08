@@ -10,6 +10,8 @@ public class LinkedListTraversal {
         node2.next=node3;
         node3.next=node4;
         traverseLL(head);
+        System.out.println();
+        recursiveTraverseLL(head);
     }
 
     public static void traverseLL(Node head)
@@ -19,6 +21,14 @@ public class LinkedListTraversal {
             System.out.print(head.num+" ");
             head=head.next;
         }
+    }
+
+    public static void recursiveTraverseLL(Node head)
+    {
+        if(head==null)
+            return;
+        System.out.print(head.num+" ");
+        recursiveTraverseLL(head.next);
     }
 }
 class Node
