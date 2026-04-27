@@ -11,6 +11,15 @@ public class printKthNodeInBinaryTree {
         printKthNode(n1,0,2);
         System.out.println("printing node at height 1");
         printKthNode(n1,0,1);
+        System.out.println("printing size of the binary tree");
+        System.out.println(printSize(n1));
+    }
+
+    static int printSize(Node node)
+    {
+        if(node==null)
+            return 0;
+        return 1+printSize(node.left)+printSize(node.right);
     }
 
     static void printKthNode(Node node, int height, int k)
@@ -20,6 +29,7 @@ public class printKthNodeInBinaryTree {
         if(height==k)
         {
             System.out.println(node.key);
+            return;
         }
         printKthNode(node.left,height+1,k);
         printKthNode(node.right,height+1,k);
